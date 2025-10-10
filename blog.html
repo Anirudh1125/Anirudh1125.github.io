@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | Anirudh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="blog.html">Blog</a>
+      <a href="friends.html">Friends</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Blog</h1>
+
+    <article class="card">
+      <header>
+        <h2>First Post: Hello World</h2>
+        <time datetime="2025-10-09">Oct 9, 2025</time>
+      </header>
+      <p>I set up GitHub Pages and built four simple pages using vanilla HTML + CSS.</p>
+    </article>
+
+    <article class="card">
+      <header>
+        <h2>What I’m Learning</h2>
+        <time datetime="2025-10-10">Oct 10, 2025</time>
+      </header>
+      <p>Practicing A* search, writing clean READMEs, and deploying small sites fast.</p>
+    </article>
+  </main>
+
+  <footer>© <span id="y"></span> Anirudh</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
