@@ -7,36 +7,40 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About Me</a>
-      <a href="blog.html">Blog</a>
-      <a href="friends.html">Friends</a>
-    </nav>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-logo" aria-hidden="true"></span> Anirudh
+      </a>
+      <input type="checkbox" id="menu-toggle" aria-hidden="true">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="friends.html">Friends</a>
+        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Blog</h1>
+  <main class="container">
+    <section class="section card float-up">
+      <h2>First Post: Hello World</h2>
+      <p class="muted">Oct 9, 2025</p>
+      <p>I set up GitHub Pages with a CSS-only, responsive navbar and subtle animations.</p>
+    </section>
 
-    <article class="card">
-      <header>
-        <h2>First Post: Hello World</h2>
-        <time datetime="2025-10-09">Oct 9, 2025</time>
-      </header>
-      <p>I set up GitHub Pages and built four simple pages using vanilla HTML + CSS.</p>
-    </article>
-
-    <article class="card">
-      <header>
-        <h2>What I’m Learning</h2>
-        <time datetime="2025-10-10">Oct 10, 2025</time>
-      </header>
+    <section class="section card float-up">
+      <h2>What I’m Learning</h2>
+      <p class="muted">Oct 10, 2025</p>
       <p>Practicing A* search, writing clean READMEs, and deploying small sites fast.</p>
-    </article>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Anirudh</footer>
+  <footer class="container section center" style="opacity:.85">
+    © <span id="y"></span> Anirudh
+  </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

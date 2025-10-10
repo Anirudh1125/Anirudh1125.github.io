@@ -7,31 +7,47 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About Me</a>
-      <a href="blog.html">Blog</a>
-      <a href="friends.html">Friends</a>
-    </nav>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-logo" aria-hidden="true"></span> Anirudh
+      </a>
+      <input type="checkbox" id="menu-toggle" aria-hidden="true">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="blog.html">Blog</a>
+        <a href="friends.html" class="active">Friends</a>
+        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Friends</h1>
-    <p>Some photos with proper <code>alt</code> text for accessibility.</p>
+  <main class="container">
+    <section class="section float-up">
+      <h1>Friends</h1>
+      <p class="muted">Photos with proper <code>alt</code> text for accessibility.</p>
+    </section>
 
-    <figure class="card">
-      <img class="responsive" src="images/friend1.jpg" alt="Friend smiling at the campus quad" />
-      <figcaption>Friend 1 — campus day.</figcaption>
-    </figure>
+    <section class="section card float-up">
+      <figure>
+        <img src="images/friend1.jpg" alt="Friend smiling at the campus quad" style="max-width:100%; border-radius:12px;">
+        <figcaption>Friend 1 — campus day.</figcaption>
+      </figure>
+    </section>
 
-    <figure class="card">
-      <img class="responsive" src="images/friend2.jpg" alt="Group photo from volleyball practice" />
-      <figcaption>Friend 2 — volleyball practice.</figcaption>
-    </figure>
+    <section class="section card float-up">
+      <figure>
+        <img src="images/friend2.jpg" alt="Group photo from volleyball practice" style="max-width:100%; border-radius:12px;">
+        <figcaption>Friend 2 — volleyball practice.</figcaption>
+      </figure>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Anirudh</footer>
+  <footer class="container section center" style="opacity:.85">
+    © <span id="y"></span> Anirudh
+  </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

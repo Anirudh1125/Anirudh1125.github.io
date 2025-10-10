@@ -7,33 +7,53 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About Me</a>
-      <a href="blog.html">Blog</a>
-      <a href="friends.html">Friends</a>
-    </nav>
+
+  <!-- NAVBAR (CSS-only) -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-logo" aria-hidden="true"></span> Anirudh
+      </a>
+
+      <!-- checkbox toggler for mobile -->
+      <input type="checkbox" id="menu-toggle" aria-hidden="true">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="blog.html">Blog</a>
+        <a href="friends.html">Friends</a>
+        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <!-- CONTENT -->
+  <main class="container">
+    <section class="section center float-up">
       <h1>Hi, I’m Anirudh 👋</h1>
-      <p>Welcome to my GitHub Pages site. Use the nav to explore.</p>
+      <p class="muted">CS grad student • AI & Systems • clean UI lover</p>
+      <p><a class="btn" href="aboutme.html">Explore my work →</a></p>
     </section>
 
-    <section class="card">
-      <h2>What’s here?</h2>
-      <ul>
-        <li><strong>About Me</strong> — background and interests.</li>
-        <li><strong>Blog</strong> — short posts on what I’m learning.</li>
-        <li><strong>Friends</strong> — an image page with alt text.</li>
-      </ul>
-      <p>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+    <section class="section card float-up">
+      <h2>Featured Project</h2>
+      <p>Liver Tumor Semantic Segmentation using GAN + CNN (SegAN). Research on improving medical image segmentation accuracy.</p>
+      <p><a href="https://github.com/Anirudh1125" target="_blank" rel="noopener">See my GitHub →</a></p>
+    </section>
+
+    <section class="section card float-up">
+      <h2>Latest Post</h2>
+      <p class="muted">Oct 9, 2025</p>
+      <p>Set up GitHub Pages with a CSS-only responsive navbar and subtle animations.</p>
+      <p><a href="blog.html">Read more →</a></p>
     </section>
   </main>
 
-  <footer>© <span id="y"></span> Anirudh</footer>
+  <footer class="container section center" style="opacity:.85">
+    © <span id="y"></span> Anirudh • Built with GitHub Pages
+  </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

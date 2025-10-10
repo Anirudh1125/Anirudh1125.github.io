@@ -7,33 +7,43 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About Me</a>
-      <a href="blog.html">Blog</a>
-      <a href="friends.html">Friends</a>
-    </nav>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-logo" aria-hidden="true"></span> Anirudh
+      </a>
+      <input type="checkbox" id="menu-toggle" aria-hidden="true">
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html" class="active">About Me</a>
+        <a href="blog.html">Blog</a>
+        <a href="friends.html">Friends</a>
+        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>About Me</h1>
-    <p>I’m a CS grad student at UAlbany interested in AI, systems, and clean UI.</p>
-    <h2>Quick facts</h2>
-    <ul>
-      <li>Projects: Liver tumor segmentation, AI search, more.</li>
-      <li>Sports: Basketball & volleyball 🏐.</li>
-      <li>Hobbies: Writing posts and building small tools.</li>
-    </ul>
+  <main class="container">
+    <section class="section float-up">
+      <h1>About Me</h1>
+      <p>I’m a CS grad student at UAlbany focused on AI, search, and clean UI. I love shipping small, polished things.</p>
+      <ul>
+        <li>Projects: SegAN liver tumor segmentation, AI search.</li>
+        <li>Sports: Basketball captain, volleyball medalist.</li>
+        <li>Find me on <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener">LinkedIn</a>.</li>
+      </ul>
+    </section>
 
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:anirudh@example.com">Email me</a> • 
-      <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
+    <section class="section card float-up">
+      <h2>Contact</h2>
+      <p><a href="mailto:anirudh@example.com">anirudh@example.com</a></p>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Anirudh</footer>
+  <footer class="container section center" style="opacity:.85">
+    © <span id="y"></span> Anirudh
+  </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
