@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anirudh's Project Gallery - Showcasing AI, ML, and Cybersecurity projects">
+    <title>Gallery - Anirudh's Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Common Stylesheet -->
+    <link rel="stylesheet" href="commonstyle.css">
+    
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-caption {
+            padding: 1.5rem;
+        }
+        
+        .gallery-caption h3 {
+            margin-top: 0;
+            color: #667eea;
+            font-size: 1.3rem;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Anirudh's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main id="main-content">
+    <div class="container">
+
+        <!-- Personal Gallery Section -->
+        <section class="personal-gallery mt-5">
+            <div class="text-center mb-5">
+                <h2 class="glow-text">🏀 My Moments Beyond Code</h2>
+                <p class="lead">Basketball, adventures, and memories that shaped who I am.</p>
+            </div>
+
+            <!-- Basketball Achievements -->
+            <div class="personal-category mb-5">
+                <h3 class="section-subtitle text-center mb-4">🏆 Basketball Achievements</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item fade-in">
+                        <img src="images/basketball_team.jpg" alt="Anirudh celebrating championship win with basketball team">
+                        <div class="gallery-caption">
+                            <h4>Championship Victory</h4>
+                            <p>Celebrating our inter-college basketball championship win — teamwork, perseverance, and pure joy!</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <img src="images/basketball_action.jpg" alt="Anirudh in action shooting a basketball during finals">
+                        <div class="gallery-caption">
+                            <h4>In Action</h4>
+                            <p>Captured mid-air during the finals — the energy, the focus, the moment that defines the game.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <img src="images/basketball_award.jpg" alt="Anirudh receiving best player award">
+                        <div class="gallery-caption">
+                            <h4>Best Player Award</h4>
+                            <p>Honored with the Best Player Award for outstanding performance throughout the tournament.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trips and Adventures -->
+            <div class="personal-category mb-5">
+                <h3 class="section-subtitle text-center mb-4">🌍 Trips & Adventures</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item fade-in">
+                        <img src="images/trip_mountain.jpg" alt="Anirudh and friends hiking in the mountains">
+                        <div class="gallery-caption">
+                            <h4>Mountain Trek</h4>
+                            <p>Scaling peaks with friends — breathtaking views, laughter, and lifelong memories.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <img src="images/IMG_5583.jpg" alt="Anirudh and friends relaxing at the beach during sunset">
+                        <div class="gallery-caption">
+                            <h4>Beach Sunset</h4>
+                            <p>Unwinding by the sea after a long semester — sunsets, music, and endless conversations.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <img src="images/DSC_0002.jpg" alt="Anirudh exploring a forest trail with friends">
+                        <div class="gallery-caption">
+                            <h4>Forest Escape</h4>
+                            <p>Exploring serene forest trails and capturing nature’s calm — a day of peace and adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="card-custom text-center mt-5">
+            <h2>Interested in Collaborating?</h2>
+            <p class="lead">
+                I'm always looking for exciting projects and research opportunities in AI, ML, and Cybersecurity.
+            </p>
+            <a href="mailto:anirudh@example.com" class="btn btn-primary btn-lg me-3">Email Me</a>
+            <a href="https://github.com/anirudh" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">View GitHub</a>
+        </div>
+    </div>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <strong>Contact:</strong> 
+                <a href="mailto:aamuda@albany.edu" class="footer-link">aamuda@albany.edu</a> | 
+                <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            </p>
+            <p>&copy; 2025 Anirudh. All rights reserved.</p>
+            <!-- <p><small>This website is designed to meet WCAG 2.2 AA accessibility standards.</small></p> -->
+            <!-- WCAG Note: All images have descriptive alt text, grid layout maintains responsive design,
+                 sufficient color contrast maintained throughout -->
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
