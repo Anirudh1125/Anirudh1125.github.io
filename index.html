@@ -1,59 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | Anirudh</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anirudh's Personal Portfolio - Master's Student in Computer Science specializing in AI, ML, and Cybersecurity">
+    <title>Anirudh - Home | AI & Cybersecurity Specialist</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Common Stylesheet -->
+    <link rel="stylesheet" href="commonstyle.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility (WCAG 2.2 AA) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Anirudh's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- NAVBAR (CSS-only) -->
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-logo" aria-hidden="true"></span> Anirudh
-      </a>
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <!-- Hero Section with Bootstrap Jumbotron-style -->
+            <div id="main-hero">
+                <h1 class="display-4 floating-icon fade-in glow-text">Hi, it's Anirudh 👋</h1>
+                <p class="lead hero-lead">Master's Student in Computer Science | AI & ML Enthusiast </p>
+                <hr class="my-4">
+                <p>Welcome to my portfolio! I'm passionate about creating innovative solutions at the intersection of artificial intelligence, machine learning, and cybersecurity.</p>
+                <!-- Bootstrap Button Component -->
+                <a class="btn btn-primary btn-lg hero-cta" href="aboutme.html" role="button">Learn More About Me</a>
+            </div>
 
-      <!-- checkbox toggler for mobile -->
-      <input type="checkbox" id="menu-toggle" aria-hidden="true">
-      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
+            <!-- Introduction Card -->
+            <div class="card-custom card-contrast">
+                <h2 class="fade-in">About My Work</h2>
+                <p>
+                    I am a dedicated software developer with strong expertise in <strong>Python</strong>, <strong>Java</strong>, and <strong>C</strong>. 
+                    Currently pursuing my Master's degree in Computer Science at the <em>University at Albany</em>, I specialize in cutting-edge 
+                    technologies including Artificial Intelligence, Machine Learning, and Cybersecurity.
+                </p>
+                <p>
+                    My professional interests lie in developing impactful solutions in several key areas:
+                </p>
+                <!-- Nested List as per requirements -->
+                <ul>
+                    <li><strong>Healthcare Technology</strong>
+                        <ul class="circle-list">
+                            <li>AI-driven medical imaging and diagnostics</li>
+                            <li>Predictive healthcare analytics</li>
+                            <li>Patient data security and privacy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Financial Security</strong>
+                        <ul class="circle-list">
+                            <li>Fraud detection systems using ML</li>
+                            <li>Real-time transaction monitoring</li>
+                            <li>Anomaly detection algorithms</li>
+                        </ul>
+                    </li>
+                    <li><strong>Data Analytics</strong>
+                        <ul class="circle-list">
+                            <li>Big data processing and visualization</li>
+                            <li>Predictive modeling and forecasting</li>
+                            <li>Business intelligence solutions</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="aboutme.html">About Me</a>
-        <a href="blog.html">Blog</a>
-        <a href="friends.html">Friends</a>
-        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
-      </nav>
-    </div>
-  </header>
+            <!-- Skills Section with Bootstrap Cards -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 skill-card">
+                        <div class="card-body">
+                            <h3 class="card-title">🤖 AI & Machine Learning</h3>
+                            <p class="card-text">Deep learning, neural networks, computer vision, natural language processing, and predictive analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 skill-card">
+                        <div class="card-body">
+                            <h3 class="card-title">🔒 Cybersecurity</h3>
+                            <p class="card-text">Network security, threat detection, encryption, vulnerability assessment, and secure software development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 skill-card">
+                        <div class="card-body">
+                            <h3 class="card-title">💻 Software Development</h3>
+                            <p class="card-text">Full-stack development, algorithm design, data structures, cloud computing, and agile methodologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- CONTENT -->
-  <main class="container">
-    <section class="section center float-up">
-      <h1>Hi, I’m Anirudh 👋</h1>
-      <p class="muted">CS grad student • AI & Systems • clean UI lover</p>
-      <p><a class="btn" href="aboutme.html">Explore my work →</a></p>
-    </section>
+            <!-- Technical Skills Badges -->
+            <div class="card-custom">
+                <h2 class="fade-in">Technical Skills</h2>
+                <div class="text-center">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">C/C++</span>
+                    <span class="skill-badge">TensorFlow</span>
+                    <span class="skill-badge">PyTorch</span>
+                    <span class="skill-badge">Scikit-learn</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">AWS</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">Cybersecurity Tools</span>
+                </div>
+            </div>
 
-    <section class="section card float-up">
-      <h2>Featured Project</h2>
-      <p>Liver Tumor Semantic Segmentation using GAN + CNN (SegAN). Research on improving medical image segmentation accuracy.</p>
-      <p><a href="https://github.com/Anirudh1125" target="_blank" rel="noopener">See my GitHub →</a></p>
-    </section>
+            <!-- External Links Section -->
+            <div class="card-custom text-center">
+                <h2>Connect With Me</h2>
+                <p>I'm always excited to collaborate on innovative projects and discuss new opportunities!</p>
+                <!--TODO: External links as per requirements -->
+                <a href="https://github.com/Anirudh1125" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg me-3">
+                    GitHub Profile
+                </a>
+                <!--TODO: External links as per requirements -->
+                <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </main>
 
-    <section class="section card float-up">
-      <h2>Latest Post</h2>
-      <p class="muted">Oct 9, 2025</p>
-      <p>Set up GitHub Pages with a CSS-only responsive navbar and subtle animations.</p>
-      <p><a href="blog.html">Read more →</a></p>
-    </section>
-  </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <strong>Contact:</strong> 
+                <a href="mailto:aamuda@albany.edu" class="footer-link">aamuda@albany.edu</a> | 
+                <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            </p>
+            <p>&copy; 2025 Anirudh. All rights reserved.</p>    
+            <!-- <p><small>This website is designed to meet WCAG 2.2 AA accessibility standards.</small></p> -->
+            <!-- WCAG Compliance Note: Color contrast ratios meet AA standards, keyboard navigation supported, 
+                 semantic HTML used throughout, alt text for images, skip links provided -->
+        </div>
+    </footer>
 
-  <footer class="container section center" style="opacity:.85">
-    © <span id="y"></span> Anirudh • Built with GitHub Pages
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

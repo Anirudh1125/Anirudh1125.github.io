@@ -1,46 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog | Anirudh</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anirudh's Blog - Thoughts on AI, Machine Learning, and Cybersecurity">
+    <title>Blog - Anirudh's Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Common Stylesheet -->
+    <link rel="stylesheet" href="commonstyle.css">
+    
+    <!-- Embedded CSS for this page (requirement: embedded CSS on two pages) -->
+    <style>
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+        
+        .blog-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-logo" aria-hidden="true"></span> Anirudh
-      </a>
-      <input type="checkbox" id="menu-toggle" aria-hidden="true">
-      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="aboutme.html">About Me</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="friends.html">Friends</a>
-        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Anirudh's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="section card float-up">
-      <h2>First Post: Hello World</h2>
-      <p class="muted">Oct 9, 2025</p>
-      <p>I set up GitHub Pages with a CSS-only, responsive navbar and subtle animations.</p>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <!-- Blog Header with Animation -->
+            <div class="blog-header pulse-animation fade-in">
+                <h1 class="glow-text">Tech Insights & Reflections</h1>
+                <!-- <p class="lead">Exploring the frontiers of AI, Machine Learning, and Cybersecurity</p> -->
+            </div>
 
-    <section class="section card float-up">
-      <h2>What I’m Learning</h2>
-      <p class="muted">Oct 10, 2025</p>
-      <p>Practicing A* search, writing clean READMEs, and deploying small sites fast.</p>
-    </section>
-  </main>
+            <!-- Bootstrap Accordion Component for Blog Posts -->
+            <div class="accordion" id="blogAccordion">
+                <!-- Blog Post 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>The Future of AI in Healthcare: Transforming Medical Imaging</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" 
+                         aria-labelledby="headingOne" data-bs-parent="#blogAccordion">
+                        <div class="accordion-body">
+                            <p class="blog-date">📅 October 10, 2025</p>
+                            <p>
+                                Artificial Intelligence is revolutionizing healthcare, particularly in the field of medical imaging. 
+                                During my research at the University at Albany, I've been exploring how deep learning algorithms 
+                                can detect diseases from X-rays, MRIs, and CT scans with remarkable accuracy—often surpassing 
+                                human radiologists in specific tasks.
+                            </p>
+                            <p>
+                                One of the most exciting developments is the use of Convolutional Neural Networks (CNNs) for 
+                                early cancer detection. By training models on millions of medical images, we can identify subtle 
+                                patterns that might be invisible to the human eye. This technology has the potential to save 
+                                countless lives through early intervention.
+                            </p>
+                            <h3>Key Challenges</h3>
+                            <ul>
+                                <li><strong>Data Privacy:</strong> Medical data is highly sensitive and requires robust security measures</li>
+                                <li><strong>Model Interpretability:</strong> Healthcare professionals need to understand why an AI makes certain predictions</li>
+                                <li><strong>Regulatory Compliance:</strong> AI systems must meet strict medical device regulations</li>
+                                <li><strong>Bias Mitigation:</strong> Ensuring models work equally well across diverse patient populations</li>
+                            </ul>
+                            <p>
+                                My current research focuses on developing explainable AI models that not only provide accurate 
+                                diagnoses but also offer clear reasoning that doctors can understand and trust. The intersection 
+                                of AI and healthcare is where I see myself making a meaningful impact in the coming years.
+                            </p>
+                            <div>
+                                <span class="tag" tabindex="0">AI</span>
+                                <span class="tag" tabindex="0">Healthcare</span>
+                                <span class="tag" tabindex="0">Deep Learning</span>
+                                <span class="tag" tabindex="0">Medical Imaging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <footer class="container section center" style="opacity:.85">
-    © <span id="y"></span> Anirudh
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+                <!-- Blog Post 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Cybersecurity in the Age of AI: Threat Detection & Prevention</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" 
+                         aria-labelledby="headingTwo" data-bs-parent="#blogAccordion">
+                        <div class="accordion-body">
+                            <p class="blog-date">📅 September 28, 2025</p>
+                            <p>
+                                As cyber threats become increasingly sophisticated, traditional security measures are no longer 
+                                sufficient. Machine learning offers a powerful solution for identifying and mitigating attacks 
+                                in real-time. During my studies, I've developed ML models that can detect anomalous network 
+                                behavior patterns that might indicate a breach.
+                            </p>
+                            <h3>The Challenge of Advanced Persistent Threats (APTs)</h3>
+                            <p>
+                                APTs are particularly dangerous because they're designed to evade detection for extended periods. 
+                                Traditional signature-based detection systems fail against these evolving threats. This is where 
+                                machine learning excels—by learning normal behavior patterns, ML models can identify deviations 
+                                that signal potential attacks.
+                            </p>
+                            <h3>My Approach to AI-Driven Security</h3>
+                            <ol>
+                                <li><strong>Behavioral Analysis:</strong> Training models on network traffic to establish baselines</li>
+                                <li><strong>Anomaly Detection:</strong> Using unsupervised learning to identify unusual patterns</li>
+                                <li><strong>Automated Response:</strong> Implementing systems that can respond to threats instantly</li>
+                                <li><strong>Continuous Learning:</strong> Updating models as new threats emerge</li>
+                            </ol>
+                            <p>
+                                The future of cybersecurity lies in the integration of AI and human expertise. While machines 
+                                excel at processing vast amounts of data quickly, human analysts provide the context and 
+                                strategic thinking necessary for comprehensive security.
+                            </p>
+                            <div>
+                                <span class="tag">Cybersecurity</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Threat Detection</span>
+                                <span class="tag">Network Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Building Ethical AI: Lessons from My Graduate Research</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" 
+                         aria-labelledby="headingThree" data-bs-parent="#blogAccordion">
+                        <div class="accordion-body">
+                            <p class="blog-date">📅 September 15, 2025</p>
+                            <p>
+                                As AI systems become more prevalent in critical decision-making processes, the question of 
+                                ethics becomes paramount. Throughout my graduate studies, I've grappled with the responsibility 
+                                that comes with developing AI technologies that can profoundly impact people's lives.
+                            </p>
+                            <h3>Core Ethical Principles</h3>
+                            <p>
+                                In my work, I adhere to several key ethical principles:
+                            </p>
+                            <ul>
+                                <li><strong>Fairness:</strong> Ensuring AI systems don't discriminate against any group</li>
+                                <li><strong>Transparency:</strong> Making AI decision-making processes understandable</li>
+                                <li><strong>Privacy:</strong> Protecting user data and respecting confidentiality</li>
+                                <li><strong>Accountability:</strong> Taking responsibility for the outcomes of AI systems</li>
+                                <li><strong>Beneficence:</strong> Developing AI that genuinely helps humanity</li>
+                            </ul>
+                            <h3>Real-World Application</h3>
+                            <p>
+                                In a recent project on fraud detection systems, I discovered that our initial model was 
+                                inadvertently flagging legitimate transactions from certain demographic groups at higher rates. 
+                                This bias stemmed from historical data that reflected systemic inequalities. Recognizing and 
+                                correcting such biases is crucial for building trustworthy AI systems.
+                            </p>
+                            <p>
+                                The lesson? Technical excellence must be paired with ethical vigilance. As AI practitioners, 
+                                we have a responsibility to question our assumptions, test for biases, and prioritize the 
+                                well-being of all users.
+                            </p>
+                            <div>
+                                <span class="tag">AI Ethics</span>
+                                <span class="tag">Responsible AI</span>
+                                <span class="tag">Bias Detection</span>
+                                <span class="tag">Graduate Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Blog Post Card -->
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <h2 class="card-title">💡 Thoughts on Learning</h2>
+                            <p class="blog-date">📅 August 30, 2025</p>
+                            <p class="card-text">
+                                My journey in Computer Science has taught me that the most valuable skill isn't mastering 
+                                a specific programming language or framework—it's learning how to learn. Technology evolves 
+                                rapidly, and what's cutting-edge today may be obsolete tomorrow.
+                            </p>
+                            <p class="card-text">
+                                At the University at Albany, I've embraced a mindset of continuous growth. Whether it's 
+                                diving into research papers on the latest neural network architectures or exploring new 
+                                cybersecurity vulnerabilities, I approach each challenge as an opportunity to expand my 
+                                understanding.
+                            </p>
+                            <p class="card-text">
+                                <strong>My advice to fellow students:</strong> Don't just consume information—engage with it 
+                                critically. Build projects, break things, experiment, and never stop asking "why?" and "what if?"
+                            </p>
+                            <div>
+                                <span class="tag">Learning</span>
+                                <span class="tag">Student Life</span>
+                                <span class="tag">Growth Mindset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TODO: Call to Action -->
+            <div class="text-center mt-5 mb-5">
+                <h2>Want to Discuss These Topics?</h2>
+                <p class="lead">I'm always excited to connect with fellow tech enthusiasts and researchers!</p>
+                <a href="mailto:anirudh@example.com" class="btn btn-primary btn-lg">Get in Touch</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <strong>Contact:</strong> 
+                <a href="aamuda@albany.edu" class="footer-link">aamuda@albany.edu</a> | 
+                <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            </p>
+            <p>&copy; 2025 Anirudh. All rights reserved.</p>
+            <!-- <p><small>This website is designed to meet WCAG 2.2 AA accessibility standards.</small></p> -->
+            <!-- WCAG Note: Accordion provides keyboard navigation, proper ARIA labels for screen readers -->
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

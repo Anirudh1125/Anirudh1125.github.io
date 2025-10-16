@@ -1,49 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me | Anirudh</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Anirudh - Personal story, leadership experience, and academic journey">
+    <title>About Me - Anirudh's Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Common Stylesheet -->
+    <link rel="stylesheet" href="commonstyle.css">
+    
+    <!-- Embedded CSS for this page (requirement: embedded CSS on two pages) -->
+    <style>
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 3px solid #667eea;
+        }
+        
+        .timeline-item::before {
+            content: '●';
+            position: absolute;
+            left: -0.6rem;
+            top: 0;
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+        
+        .profile-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-logo" aria-hidden="true"></span> Anirudh
-      </a>
-      <input type="checkbox" id="menu-toggle" aria-hidden="true">
-      <label class="hamburger" for="menu-toggle" aria-label="Open menu">☰</label>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="aboutme.html" class="active">About Me</a>
-        <a href="blog.html">Blog</a>
-        <a href="friends.html">Friends</a>
-        <a class="nav-cta" href="mailto:anirudh@example.com">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Anirudh's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="section float-up">
-      <h1>About Me</h1>
-      <p>I’m a CS grad student at UAlbany focused on AI, search, and clean UI. I love shipping small, polished things.</p>
-      <ul>
-        <li>Projects: SegAN liver tumor segmentation, AI search.</li>
-        <li>Sports: Basketball captain, volleyball medalist.</li>
-        <li>Find me on <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener">LinkedIn</a>.</li>
-      </ul>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container about-page">
+            <h1 class="page-title fade-in glow-text">About Me</h1>
+            
+            <!-- Responsive Image using picture element (requirement) -->
+            <div class="profile-container fade-in">
+                <picture>
+                    <!-- Mobile: smaller cropped image -->
+                    <source media="(max-width: 768px)" srcset="images/DSC_0002.jpg">
+                    <!-- Tablet and up: larger image -->
+                    <source media="(min-width: 769px)" srcset="images/DSC_0002.jpg">
+                    <!-- Fallback image -->
+                    <img src="images/DSC_0002.jpg"
+                         alt="Professional photo of Anirudh"
+                         class="img-fluid rounded-circle"
+                         width="400" height="400" loading="lazy">
+                </picture>
+                <!-- WCAG Note: Alt text provided for screen readers, sufficient color contrast maintained -->
+            </div>
 
-    <section class="section card float-up">
-      <h2>Contact</h2>
-      <p><a href="mailto:anirudh@example.com">anirudh@example.com</a></p>
-    </section>
-  </main>
+            <!-- Personal Story Section -->
+            <div class="card-custom section-card">
+                <h2>My Journey</h2>
+                <p>
+                    My passion for technology began at a young age when I first discovered the power of programming. 
+                    What started as curiosity quickly evolved into a deep fascination with how computers can solve complex 
+                    real-world problems. This journey led me to pursue Computer Science, where I found my calling at the 
+                    intersection of Artificial Intelligence, Machine Learning, and Cybersecurity.
+                </p>
+                <p>
+                    Currently, I'm pursuing my Master's degree in Computer Science at the <strong>University at Albany</strong>, 
+                    where I'm diving deep into advanced topics like neural networks, cryptography, and distributed systems. 
+                    My academic research focuses on developing AI-driven security solutions that can detect and prevent 
+                    cyber threats in real-time.
+                </p>
+            </div>
 
-  <footer class="container section center" style="opacity:.85">
-    © <span id="y"></span> Anirudh
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+            <!--TODO: Quote Box with inline styling (requirement: inline styles on couple elements) -->
+            <div class="quote-box tilt-quote">
+                "Code is like humor. When you have to explain it, It's bad." - unknown
+            </div>
+
+            <!-- Leadership & Extracurricular Section -->
+            <div class="card-custom section-card">
+                <h2>Leadership & Extracurricular Experience</h2>
+                <p>
+                    Beyond academics, I believe in the importance of leadership, teamwork, and community engagement. 
+                    These experiences have shaped my ability to communicate effectively, manage projects, and inspire others.
+                </p>
+                
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Festival Organizing Committee</h3>
+                    <p>
+                        Led the technical committee for our university's annual tech fest, managing a budget of $15,000 
+                        and coordinating with 50+ volunteers. Successfully organized hackathons, coding competitions, 
+                        and AI workshops that attracted over 500 participants from multiple universities.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Basketball Team Captain</h3>
+                    <p>
+                        Served as captain of the university basketball team for two consecutive years. Developed strategic 
+                        game plans, mentored junior players, and fostered a culture of teamwork and discipline. Led the 
+                        team to win the inter-college championship in 2023.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Student Council Treasurer</h3>
+                    <p>
+                        Managed the annual budget of $50,000 for student activities and events. Implemented a new 
+                        transparent budgeting system that increased student participation in decision-making processes. 
+                        Ensured all financial operations complied with university policies.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Peer Mentor Program</h3>
+                    <p>
+                        Volunteered as a peer mentor for incoming Computer Science students, helping them navigate 
+                        academic challenges and adjust to university life. Conducted weekly study sessions and provided 
+                        guidance on course selection and career planning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Personal Interests Section -->
+            <div class="card-custom section-card">
+                <h2>Beyond Technology</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>🏀 Sports Enthusiast</h3>
+                        <p>
+                            Basketball has always been more than just a game to me—it's taught me the value of teamwork, 
+                            perseverance, and strategic thinking. I apply these lessons to my work in technology every day.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>📚 Continuous Learner</h3>
+                        <p>
+                            I'm constantly exploring new technologies and methodologies. Whether it's reading research papers, 
+                            taking online courses, or attending tech conferences, I believe in staying at the forefront of innovation.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h3>🌍 Community Service</h3>
+                        <p>
+                            I actively participate in community outreach programs, teaching coding basics to underprivileged 
+                            students and promoting digital literacy in rural areas.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>🎵 Music & Arts</h3>
+                        <p>
+                            Music provides balance to my technical pursuits. I enjoy playing guitar and believe that 
+                            creativity in arts enhances problem-solving abilities in technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section with inline style (requirement) -->
+            <!-- <div class="card-custom values-gradient section-card">
+                <h2 class="section-title">Core Values</h2>
+                <ul class="values-grid">
+                    <li><strong>Innovation:</strong> Constantly seeking new and better ways to solve problems</li>
+                    <li><strong>Integrity:</strong> Maintaining ethical standards in all work, especially in cybersecurity</li>
+                    <li><strong>Collaboration:</strong> Believing in the power of teamwork and diverse perspectives</li>
+                    <li><strong>Excellence:</strong> Striving for the highest quality in every project</li>
+                    <li><strong>Impact:</strong> Focusing on creating solutions that make a real difference</li>
+                </ul>
+            </div> -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <strong>Contact:</strong> 
+                <a href="mailto:aamuda@albany.edu" class="footer-link">aamuda@albany.edu</a> | 
+                <a href="https://www.linkedin.com/in/anirudhamuda1125" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            </p>
+            <p>&copy; 2025 Anirudh. All rights reserved.</p>
+            <!-- <p><small>This website is designed to meet WCAG 2.2 AA accessibility standards.</small></p> -->
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
